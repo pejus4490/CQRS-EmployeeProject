@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System.Net;
 using Employee.Shared.Enums;
 
-namespace Employee.Infrastructure.Persistence.Configurationsl;
+namespace Employee.Infrastructure.Persistence.Configurations;
 
 public class EmployeeConfiguration : IEntityTypeConfiguration<Employees>
 {
@@ -14,20 +14,20 @@ public class EmployeeConfiguration : IEntityTypeConfiguration<Employees>
         builder.HasOne(x => x.Country).WithMany(x => x.Employees).HasForeignKey(x => x.CountryId);
         builder.HasOne(x => x.State).WithMany(x => x.Employee).HasForeignKey(x => x.StateId);
 
-        //builder.HasData(new
-        //{
-        //    Id=1,
-        //    FirstName ="Anik",
-        //    LastName = "Shah",
-        //    Address="Dhaka",
-        //    Age=25,
-        //    PhoneNumber= "017xxxxxx",
-        //    CountryId=1,
-        //    StateId=1,
-        //    Created=DateTimeOffset.Now,
-        //    CreatedBy="1",
-        //    LastModified=DateTimeOffset.Now,
-        //    Status =EntityStatus.Created
-        //});
+        builder.HasData(new
+        {
+            Id = 1,
+            FirstName = "Anik",
+            LastName = "Shah",
+            Address = "Dhaka",
+            Age = 25,
+            PhoneNumber = "017xxxxxx",
+            CountryId = 1,
+            StateId = 1,
+            Created = DateTimeOffset.Now,
+            CreatedBy = "1",
+            LastModified = DateTimeOffset.Now,
+            Status = EntityStatus.Created
+        });
     }
 }

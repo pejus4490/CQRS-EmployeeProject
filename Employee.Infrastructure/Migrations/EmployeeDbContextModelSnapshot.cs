@@ -61,10 +61,10 @@ namespace Employee.Infrastructure.Migrations
                         {
                             Id = 1,
                             CountryName = "Bangladesh",
-                            Created = new DateTimeOffset(new DateTime(2023, 9, 30, 10, 14, 55, 670, DateTimeKind.Unspecified).AddTicks(8532), new TimeSpan(0, 6, 0, 0, 0)),
+                            Created = new DateTimeOffset(new DateTime(2023, 9, 30, 23, 42, 9, 922, DateTimeKind.Unspecified).AddTicks(1594), new TimeSpan(0, 6, 0, 0, 0)),
                             CreatedBy = "1",
                             Currency = "BDT",
-                            LastModified = new DateTimeOffset(new DateTime(2023, 9, 30, 10, 14, 55, 670, DateTimeKind.Unspecified).AddTicks(8570), new TimeSpan(0, 6, 0, 0, 0)),
+                            LastModified = new DateTimeOffset(new DateTime(2023, 9, 30, 23, 42, 9, 922, DateTimeKind.Unspecified).AddTicks(1624), new TimeSpan(0, 6, 0, 0, 0)),
                             Status = 1
                         });
                 });
@@ -165,9 +165,9 @@ namespace Employee.Infrastructure.Migrations
                         {
                             Id = 1,
                             CountryId = 1,
-                            Created = new DateTimeOffset(new DateTime(2023, 9, 30, 10, 14, 55, 671, DateTimeKind.Unspecified).AddTicks(1852), new TimeSpan(0, 6, 0, 0, 0)),
+                            Created = new DateTimeOffset(new DateTime(2023, 9, 30, 23, 42, 9, 922, DateTimeKind.Unspecified).AddTicks(9484), new TimeSpan(0, 6, 0, 0, 0)),
                             CreatedBy = "1",
-                            LastModified = new DateTimeOffset(new DateTime(2023, 9, 30, 10, 14, 55, 671, DateTimeKind.Unspecified).AddTicks(1864), new TimeSpan(0, 6, 0, 0, 0)),
+                            LastModified = new DateTimeOffset(new DateTime(2023, 9, 30, 23, 42, 9, 922, DateTimeKind.Unspecified).AddTicks(9494), new TimeSpan(0, 6, 0, 0, 0)),
                             StateName = "Dhaka",
                             Status = 1
                         });

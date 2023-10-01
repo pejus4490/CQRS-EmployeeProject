@@ -37,8 +37,8 @@ namespace Employee.Backend.Controllers
             return await HandleCommandAsync(new UpdateStateCommand(id, state));
               }
 
-        [HttpDelete]
-        public async Task<ActionResult<VMCountry>> DeleteState(int id)
+        [HttpDelete("{id:int}")]
+        public async Task<ActionResult<VMState>> DeleteState(int id)
         {
             return await HandleCommandAsync(new DeleteStateCommand(id));
         }

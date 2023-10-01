@@ -478,3 +478,10 @@ G:\work\Employee(ofc)\Employee\Employee.BackEnd\obj\Debug\net7.0\refint\Employee
 G:\work\Employee(ofc)\Employee\Employee.BackEnd\obj\Debug\net7.0\Employee.BackEnd.pdb
 G:\work\Employee(ofc)\Employee\Employee.BackEnd\obj\Debug\net7.0\Employee.BackEnd.genruntimeconfig.cache
 G:\work\Employee(ofc)\Employee\Employee.BackEnd\obj\Debug\net7.0\ref\Employee.BackEnd.dll
+G:\work\Employee(ofc)\Employee\Employee.BackEnd\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+G:\work\Employee(ofc)\Employee\Employee.BackEnd\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+G:\work\Employee(ofc)\Employee\Employee.BackEnd\bin\Debug\net7.0\Newtonsoft.Json.dll
+G:\work\Employee(ofc)\Employee\Employee.BackEnd\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
+G:\work\Employee(ofc)\Employee\Employee.BackEnd\bin\Debug\net7.0\Swashbuckle.AspNetCore.Annotations.dll
+G:\work\Employee(ofc)\Employee\Employee.BackEnd\bin\Debug\net7.0\Swashbuckle.AspNetCore.Newtonsoft.dll
+G:\work\Employee(ofc)\Employee\Employee.BackEnd\bin\Debug\net7.0\Swashbuckle.AspNetCore.ReDoc.dll

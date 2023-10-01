@@ -7,7 +7,7 @@
 <h1>Index</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="AddOrEdit">Create New</a>
 </p>
 <table class="table">
     <thead>
@@ -37,9 +37,12 @@
                 @Html.DisplayFor(modelItem => item.CountryId)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @* @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
                 @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ }) *@
+
+                    <a class=" btn btn-success" href="State/AddorEdit/@item.Id">Edit</a>
+                    <a class=" btn btn-danger" href="State/Delete/@item.Id" onclick="return confirm('Are you sure ?You want to delete this item?')">Delete</a>
             </td>
         </tr>
 }

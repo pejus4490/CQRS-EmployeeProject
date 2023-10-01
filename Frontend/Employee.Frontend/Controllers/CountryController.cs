@@ -15,6 +15,8 @@ public class CountryController : Controller
         var response = await _httpClient.GetFromJsonAsync<List<Country>>("Country");
         return response is not null? response : new List<Country>();
     }
+
+    [HttpGet]
     public async Task<IActionResult> AddOrEdit(int Id)
     {
         if(Id == 0)
@@ -54,6 +56,7 @@ public class CountryController : Controller
         }
         return View(new Country());
     }
+    [HttpDelete]
     public async Task<IActionResult> Delete(int Id)
     {
         var data = await _httpClient.DeleteAsync($"Country/{Id}");
