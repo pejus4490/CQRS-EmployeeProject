@@ -17,4 +17,6 @@ public class State
     /// CountryId
     /// </summary>
     public int CountryId { get; set; }
+
+    public string? CountryName { get; set; }
 }

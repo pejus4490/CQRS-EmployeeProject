@@ -29,21 +29,25 @@ public class StateController : Controller
             var countryList = JsonConvert.DeserializeObject<List<Country>>(content);
             ViewData["countryId"] = new SelectList(countryList, "Id", "CountryName");
         }
-        
 
 
+        var responseToCountry = await _httpClient.GetAsync("Country");
+        //ViewBag.Country = await responseToCountry.Content.ReadFromJsonAsync<IEnumerable<Country>>();
         if (Id == 0)
         {
             //Create Form
-            return View(new State());
+            ViewBag.Buttontext = "Create";
+            
+            //return View(new State());
         }
         else
         {
             //Get By Id
-            var data = await _httpClient.GetAsync($"State/{Id}");
-            if (data.IsSuccessStatusCode)
+          
             {
-                var result = await data.Content.ReadFromJsonAsync<State>();
+                var responseToEdit = await _httpClient.GetAsync($"State/{Id}");
+                var result = await responseToEdit.Content.ReadFromJsonAsync<State>();
+                ViewBag.ButtonText = "Save";
                 return View(result);
             }
         }

@@ -38,8 +38,10 @@ namespace Employee.Service.Model
         /// Country Id
         /// </summary>
         public int CountryId { get; set; }
+        public string? CountryName { get; set; }
 
         public int StateId { get; set; }
+        public string? StateName { get; set;}
 
 
 

@@ -13,9 +13,13 @@ namespace Employee.Core.Mapping
     {
         public MappingExtension()
         {
-            CreateMap<VMEmployee, Employees>().ReverseMap();
+            CreateMap<VMEmployee, Employees>().ReverseMap()
+            .ForMember(x => x.CountryName, x => x.MapFrom(x => x.Country != null ? x.Country.CountryName : ""))
+            .ForMember(x => x.StateName, x => x.MapFrom(x => x.State != null ? x.State.StateName : ""));
+
             CreateMap<VMCountry, Country>().ReverseMap();
-            CreateMap<VMState, State>().ReverseMap();
+            CreateMap<VMState, State>().ReverseMap()
+            .ForMember(x => x.CountryName, x => x.MapFrom(x => x.Country != null ? x.Country.CountryName : ""));
 
         }
     }
