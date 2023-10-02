@@ -33,12 +33,19 @@ public class Employeest
     /// Country Id
     /// </summary>
     public int CountryId { get; set; }
-
+    /// <summary>
+    /// CountryName
+    /// </summary>
+    public string? CountryName { get; set; }
     /// <summary>
     /// State Id
     /// </summary>
 
     public int StateId { get; set; }
+    /// <summary>
+    /// StateName
+    /// </summary>
+    public string? StateName { get; set;}
 
 
 

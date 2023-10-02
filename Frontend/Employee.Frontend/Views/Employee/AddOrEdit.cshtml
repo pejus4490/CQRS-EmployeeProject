@@ -1,12 +1,27 @@
 ﻿@model Employee.Frontend.Models.Employeest
 
 @{
-    ViewData["Title"] = "AddOrEdit";
+    if(ViewBag.Buttontext=="Save")
+    {
+        ViewData["Title"] = "Edit-" + Model.FirstName;
+    }
+    else
+    {
+        ViewData["Title"] = "Create Employee";
+    }
+
+}
+@{
+    if (ViewBag.Buttontext == "Save")
+    {
+        <h1>Edit Info of @Model.FirstName</h1>
+    }
+    else
+    {
+        <h1> Create New Employee</h1>
+    }
 }
 
-<h1>AddOrEdit</h1>
-
-<h4>Employeest</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">

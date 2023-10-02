@@ -42,17 +42,23 @@ public class EmployeeController : Controller
         if (Id == 0)
         {
             //Create Form
+            ViewBag.Buttontext = "Create";//For showing indicate message on frontend View
             return View(new Employeest());
         }
         else
         {
             //Get By Id
             var data = await _httpClient.GetAsync($"Employee/{Id}");
-            if (data.IsSuccessStatusCode)
+            if (data.IsSuccessStatusCode) 
             {
+             
                 var result = await data.Content.ReadFromJsonAsync<Employeest>();
+                ViewBag.ButtonText = "Save";//For showing indicate message on frontend View
                 return View(result);
+
             }
+
+
         }
         return View(new Employeest());
 

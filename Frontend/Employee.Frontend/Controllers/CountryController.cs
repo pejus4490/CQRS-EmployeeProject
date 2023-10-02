@@ -22,6 +22,7 @@ public class CountryController : Controller
         if(Id == 0)
         {
             //Create Form
+            ViewBag.ButtonText = "Create";
             return View(new Country());
         }
         else
@@ -31,6 +32,7 @@ public class CountryController : Controller
             if (data.IsSuccessStatusCode)
             {
                 var result = await data.Content.ReadFromJsonAsync<Country>();
+                ViewBag.ButtonText = "Save";
                 return View(result);
             }
         }
